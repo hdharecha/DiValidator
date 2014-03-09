@@ -21,7 +21,7 @@
 
 // defaults
     DiValidator.DEFAULTS = {
-        prop: 'value'
+        fieldErrorClass: 'di-validation-error'
     }
 
     DiValidator.prototype.setValidation = function (param) {
@@ -87,6 +87,7 @@
         $(self.fieldTypes,self.$element).each(function(i, iField){
             console.info("valid "+$(iField).val());
             if(!$(iField).data('required-validator')($(iField))){
+                $(iField).addClass(DiValidator.DEFAULTS.fieldErrorClass)
                 alert($(iField).data('required-message'));
             }
         });

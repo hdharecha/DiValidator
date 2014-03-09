@@ -9,22 +9,41 @@
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title>Bootstrap plugin</title>
+    <link href="css/di.validator-1.0.0.css" rel="stylesheet">
     <script type="text/javascript" src="js/lib/jquery-1.10.2.min.js"></script>
-      <script type="text/javascript" src="js/lib/json3.min.js"></script>
-      <script type="text/javascript" src="js/di.validator-1.0.0.js"></script>
+    <script type="text/javascript" src="js/lib/json3.min.js"></script>
+    <script type="text/javascript" src="js/di.validator-1.0.0.js"></script>
 
   </head>
 
   <body>
 
   <form id="myForm" data-validate="diValidator">
-      <input type="text" dv-required="First name requires">
-       <select  dv-required="Gender requires" data-invalide="-1">
-           <option>-1</option>
-           <option>M</option>
-       </select>
-      <INPUT type="text" dv-required="Last name requires">
-      <button id="testBtn" data-provoke="diValidator" type="button">Test</button>
+      <div>
+          <label for="name">Name</label>
+          <input  id="name" name="name" type="text" dv-required="Name requires">
+      </div>
+      <div>
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender"  dv-required="Gender requires" data-invalide="-1">
+              <option value="-1">select</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+          </select>
+      </div>
+      <div>
+          <label for="name">Lnaguge</label>
+          <input  id="name" name="name" type="text" dv-required="Name requires">
+      </div>
+      <div>
+          <label for="email">Email</label>
+          <input  id="email" name="email" type="text">
+      </div>
+
+      <div>
+          <button id="testBtn" data-provoke="diValidator" type="button">Test</button>
+      </div>
+
   </form>
   </body>
 </html>
