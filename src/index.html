@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Bootstrap plugin</title>
+    <script type="text/javascript" src="js/lib/jquery-1.10.2.min.js"></script>
+      <script type="text/javascript" src="js/lib/json3.min.js"></script>
+      <script type="text/javascript" src="js/di.validator-1.0.0.js"></script>
+
+  </head>
+
+  <body>
+
+  <form id="myForm" data-validate="diValidator">
+      <input type="text" dv-required="First name requires">
+       <select  dv-required="Gender requires" data-invalide="-1">
+           <option>-1</option>
+           <option>M</option>
+       </select>
+      <INPUT type="text" dv-required="Last name requires">
+      <button id="testBtn" data-provoke="diValidator" type="button">Test</button>
+  </form>
+  </body>
+</html>
