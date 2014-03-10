@@ -4,5 +4,19 @@
     -moz-box-shadow: 0 0 5px rgba(218, 30, 37, 0.63);
     box-shadow: 0 0 5px rgba(218, 30, 37, 0.63);
 
+    border: solid #ffa627 1px;
 
+}
+.di-error:before{
+    background-image: url("../images/di-error.png");
+    background-size: 10px;
+    background-repeat: no-repeat;
+    padding-right: 10px;
+    content: "";
+}
+.di-error{
+    color: #ffa627;
+}
+.di-error-next{
+    margin-left: 10px;     
 }

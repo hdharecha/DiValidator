@@ -21,7 +21,10 @@
 
 // defaults
     DiValidator.DEFAULTS = {
-        fieldErrorClass: 'di-validation-error'
+        fieldErrorClass: 'di-validation-error',
+        nextErrorClass: 'di-error di-error-next',
+
+        messageLocation: 'next'
     }
 
     DiValidator.prototype.setValidation = function (param) {
@@ -88,7 +91,11 @@
             console.info("valid "+$(iField).val());
             if(!$(iField).data('required-validator')($(iField))){
                 $(iField).addClass(DiValidator.DEFAULTS.fieldErrorClass)
-                alert($(iField).data('required-message'));
+                //alert($(iField).data('required-message'));
+                if(self.options.messageLocation == 'next'){
+                    $(iField).next('.'+DiValidator.DEFAULTS.nextErrorClass).remove()
+                    $(iField).after('<span class="'+DiValidator.DEFAULTS.nextErrorClass+'">'+$(iField).data('required-message')+'</span>')
+                }
             }
         });
     }
