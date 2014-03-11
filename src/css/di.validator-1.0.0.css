@@ -8,7 +8,7 @@
 
 }
 .di-error:before{
-    background-image: url("../images/di-error.png");
+    background-image: url("../images/di-error-icon.png");
     background-size: 10px;
     background-repeat: no-repeat;
     padding-right: 10px;
